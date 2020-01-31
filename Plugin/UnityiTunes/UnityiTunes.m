@@ -51,10 +51,10 @@ typedef void (*callbackFunc)(const char *);
   self = [super init];
   if (self)
   {
-    iTunes_ = [[SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"] retain];
+    iTunes_ = [[SBApplication applicationWithBundleIdentifier:@"com.apple.Music"] retain];
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(updateTrackInfoFromITunes:)
-                                                            name:@"com.apple.iTunes.playerInfo"
+                                                            name:@"com.apple.Music.playerInfo"
                                                           object:nil];
     artist_ = calloc(BUFLEN, 1);
     album_ = calloc(BUFLEN, 1);
